@@ -1,0 +1,275 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: #111827;
+    color: white;
+    padding: 18px 20px;
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+nav h1 {
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+/* =========================
+   HERO / HOME
+========================= */
+
+.hero {
+    background-color: #2563eb;
+    color: white;
+
+    min-height: 500px;
+    padding: 80px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.tagline,
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p:not(.tagline) {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+
+    background-color: #f59e0b;
+    color: #111827;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    padding: 13px 25px;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: #fbbf24;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.about,
+.services,
+.contact {
+    padding: 80px 20px;
+}
+
+.section-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-label {
+    color: #2563eb;
+}
+
+.about h2,
+.services h2,
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background-color: white;
+}
+
+.about p {
+    max-width: 750px;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background-color: #eef2ff;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.service-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+    color: #2563eb;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background-color: white;
+}
+
+.contact-info {
+    background-color: #f5f7fa;
+
+    max-width: 600px;
+
+    padding: 25px;
+    border-radius: 10px;
+
+    border-left: 5px solid #2563eb;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #111827;
+    color: white;
+
+    text-align: center;
+    padding: 25px 20px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero p:not(.tagline) {
+        font-size: 16px;
+    }
+
+    .about,
+    .services,
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .about h2,
+    .services h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+}
